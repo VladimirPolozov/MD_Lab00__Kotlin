@@ -9,6 +9,6 @@ fun getSumOfFirstAndLastDigits(number: String) : Int {
 
 fun main() {
     print("Введите целое положительное число: ")
-    var number = readln()
-    println(getSumOfFirstAndLastDigits(number))
+    val number = readln()
+    println("Сумма первой и последней цифр введённого числа = " + getSumOfFirstAndLastDigits(number))
 }
