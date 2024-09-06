@@ -7,21 +7,21 @@ fun getSumOfFirstAndLastDigits(number: String) : Int {
     return firstDigit + lastDigit
 }
 
-fun sumOfInputtedNumbers() : Int {
-    var sumOfUserNumbers = 0
-    do {
-        val userInput = readln()
-        sumOfUserNumbers += userInput.toInt()
-    } while (userInput != "0")
-
-    return sumOfUserNumbers
-}
-
 fun main() {
     print("Введите целое положительное число: ")
-    val userInput = readln()
-    println("Сумма первой и последней цифр введённого числа = " + getSumOfFirstAndLastDigits(userInput))
+    var userInput = readln()
+    println("Сумма первой и последней цифр введённого числа: " + getSumOfFirstAndLastDigits(userInput))
 
     println("Вводите любые числа, отделяя их через Enter. Чтобы прервать ввод введите «0»")
-    println("Сумма введённых чисел = " + sumOfInputtedNumbers())
+    var sumOfUserNumbers = 0
+    var countOfUserNumbers = -1
+    do {
+        userInput = readln()
+        sumOfUserNumbers += userInput.toInt()
+        countOfUserNumbers += 1
+    } while (userInput != "0")
+
+    println("Количество введённых чисел: " + countOfUserNumbers + "\n" +
+            "Сумма введённых чисел: " + sumOfUserNumbers + "\n" +
+            "Среднее арифметическое ввёднных чисел: " + sumOfUserNumbers / countOfUserNumbers)
 }
