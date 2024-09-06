@@ -7,7 +7,7 @@ fun getSumOfFirstAndLastDigits(number: String) : Int {
     return firstDigit + lastDigit
 }
 
-fun sumOfInputedNumbers() : Int {
+fun sumOfInputtedNumbers() : Int {
     var sumOfUserNumbers = 0
     do {
         val userInput = readln()
@@ -23,5 +23,5 @@ fun main() {
     println("Сумма первой и последней цифр введённого числа = " + getSumOfFirstAndLastDigits(userInput))
 
     println("Вводите любые числа, отделяя их через Enter. Чтобы прервать ввод введите «0»")
-    println("Сумма введённых чисел = " + sumOfInputedNumbers())
+    println("Сумма введённых чисел = " + sumOfInputtedNumbers())
 }
